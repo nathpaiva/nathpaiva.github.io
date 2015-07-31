@@ -1,0 +1,73 @@
+// import colors of site
+@import 'colors';
+
+/* Fonts
+-----------------------------*/
+@font-face
+{
+    font-family: 'UrbanaLight';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('../font/UrbanaLight.otf');
+    src: url('../font/UrbanaLight.eot?#iefix') format('embedded-opentype'),
+    url('../font/UrbanaLight.woff') format('woff'),
+    url('../font/UrbanaLight.ttf') format('truetype'),
+    url('../font/UrbanaLight.svg#urbanlight') format('svg');
+}
+
+$font: Arial, Helvetica, sans-serif;
+
+
+
+// site of size
+$site-size: 700px;
+
+@function em($target, $context)
+{
+    @return ($target / $context) * 1em;
+}
+
+input[type='checkbox']
+{
+    display: none;
+    + label
+    {
+        position: relative;
+
+        cursor: pointer;
+        &:empty
+        {
+            display: inline-block;
+
+            margin: 0;
+
+            vertical-align: middle;
+        }
+    }
+    + label:before
+    {
+        display: inline-block;
+
+        width: 15px;
+        height: 15px;
+
+        content: '';
+        vertical-align: middle;
+
+        background-color: $color1;
+    }
+    &:checked + label:after
+    {
+        position: absolute;
+        top: 5px;
+        left: 3px;
+
+        width: 9px;
+        height: 9px;
+
+        content: '';
+
+        background-color: #f1f1f1;
+    }
+}

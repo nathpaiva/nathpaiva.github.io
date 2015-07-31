@@ -1,0 +1,25 @@
+{
+    "total": 4,
+    "list": [
+        {
+            "id": "9809839012",
+            "name": "Detergente",
+            "status": true
+        },
+        {
+            "id": "0980980980",
+            "name": "Papel higienico",
+            "status": true
+        },
+        {
+            "id": "976768767868",
+            "name": "Açúcar",
+            "status": false
+        },
+        {
+            "id": "0190190109900",
+            "name": "Pasta de dente",
+            "status": false
+        }
+    ]
+}

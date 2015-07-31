@@ -1,0 +1,9 @@
+<form name="formcreate" data-ng-submit="createUser(contato)">
+	<input type="text" ng-model="contato.name" ng-required="true" placeholder="Login">
+	<input type="password" ng-model="contato.pass" ng-required="true" placeholder="Digite sua senha">
+	<input type="submit" value="Regristrar" ng-disabled="formcreate.$invalid" />
+</form>
+
+<p><a href="/#/">Voltar</a> para a página de login.</p>
+<br>
+{{message}}

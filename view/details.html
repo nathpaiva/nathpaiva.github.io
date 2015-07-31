@@ -1,0 +1,8 @@
+<div class="detail" ng-repeat="product in list">
+	<h1>Produto <span>{{product.name}}</span></h1>
+	<h2>Total <span class="task" ng-class="{'taskdone': product.status}">a ser </span> pago <span>{{product.price | currency}}</span></h2>
+	<a class="pay" class="task" ng-class="{'taskdone': product.status}" href="/">Pagar conta</a>
+</div>
+<a href="/#/list" class="back">VOLTAR</a>
+<br>
+{{message}}

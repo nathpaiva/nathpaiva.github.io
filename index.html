@@ -1,1 +1,28 @@
-<h3>NathPaiva</h3>
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>{{app}}</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header ng-include="'view/header.html'" scope="" onload=""></header>
+
+		<main ng-view></main>
+
+		<footer ng-include="'view/footer.html'" scope="" onload=""></footer>
+
+		<script type="text/javascript" src="lib/angular.js"></script>
+		<script type="text/javascript" src="lib/angular-route.js"></script>
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/controllers/loginCreatUserlistBuyCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/listBuyCtrl.js"></script>
+		<script type="text/javascript" src="js/controllers/listDetailBuyCtrl.js"></script>
+		<script type="text/javascript" src="js/services/loginAPIService.js"></script>
+		<script type="text/javascript" src="js/services/listAPIService.js"></script>
+		<script type="text/javascript" src="js/value/configValue.js"></script>
+	</div>
+</body>
+</html>
