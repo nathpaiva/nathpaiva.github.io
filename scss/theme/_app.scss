@@ -24,7 +24,10 @@ header
         text-align: center;
     }
 }
-
+h1.center
+{
+    text-align: center;
+}
 // CONFIG GENERAL INPUT
 input[type='text'],
 input[type='password']
@@ -180,13 +183,14 @@ table
             float: right;
         }
     }
-    .task{
-display: inline-block;
-float: none;
-    &.taskdone
+    .task
     {
-        display: none;
-    }
+        display: inline-block;
+        float: none;
+        &.taskdone
+        {
+            display: none;
+        }
     }
     .pay
     {

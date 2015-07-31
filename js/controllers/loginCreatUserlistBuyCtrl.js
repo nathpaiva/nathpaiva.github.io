@@ -1,6 +1,5 @@
-app.controller("loginCreatUserlistBuyCtrl", function($scope, $window, loginAPI, listAPI, $rootScope, $location){
+app.controller("loginCreatUserlistBuyCtrl", function($scope, $window, loginAPI, listAPI){
 
-	$rootScope.activetab = $location.path();
 	$scope.titleBuy = "Bem vindo ao iBuy";
 	$scope.saved = localStorage.getItem('loginteste');
 	$scope.registerLogin = ( $scope.saved !== null ) ? JSON.parse($scope.saved) : [];

@@ -27,7 +27,10 @@ $site-size: 700px;
 {
     @return ($target / $context) * 1em;
 }
-
+input[disabled="disabled"]{
+    opacity: .5;
+    cursor: default;
+}
 input[type='checkbox']
 {
     display: none;

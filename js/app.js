@@ -21,5 +21,10 @@ app.config(function($routeProvider, $locationProvider)
 		templateUrl : '../view/details.html',
 		controller  : 'listDetailBuyCtrl',
    })
-   .otherwise ({ redirectTo: '/' });
+	.when('/success', {
+		templateUrl : '../view/success.html'
+   })
+   .otherwise ({
+   		templateUrl : '../view/error.html'
+	});
 });

@@ -1,7 +1,5 @@
 app.controller("listBuyCtrl", function($scope, listAPI, $rootScope, $location){
 
-	$rootScope.activetab = $location.path();
-	$scope.titleBuy = "Lista iBuy";
 	$scope.list = [];
 
 	// Load All items of Object

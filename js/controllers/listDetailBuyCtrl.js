@@ -1,7 +1,5 @@
-app.controller("listDetailBuyCtrl", function($scope, $location, listAPI, $rootScope, $location){
+app.controller("listDetailBuyCtrl", function($scope, $location, listAPI){
 
-	$rootScope.activetab = $location.path();
-	$scope.titleBuy = "Detalhe iBuy";
 	$scope.list = [];
 	$scope.id = "";
 
