@@ -1,4 +1,4 @@
-app.controller("loginCreatUserlistBuyCtrl", function($scope, $window, loginAPI, listAPI){
+app.controller("loginCreatUserlistBuyCtrl", function($scope, $window, loginAPI){
 
 	$scope.titleBuy = "Bem vindo ao iBuy";
 	$scope.saved = localStorage.getItem('loginteste');
