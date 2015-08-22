@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Andika Basic";
+  src: url("/font/AndBasR.ttf");
+}
+* {
+  font-family: "Andika Basic";
+  color: #444444;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  max-width: 900px;
+  padding: 20px 0 0;
+  text-align: center;
+}
+.container h1 {
+  font-size: 50px;
+  line-height: 52px;
+}
+.container h2 {
+  font-size: 40px;
+  margin: 20px 0 0;
+}
+.container h2 a {
+  font-size: 35px;
+}
