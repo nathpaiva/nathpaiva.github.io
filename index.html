@@ -1,39 +1,86 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="google-site-verification" content="W-yq4hu0XINdtyCdeDsM8ndTWiYryjQofyhtqyEbRMU" />
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
-	<link rel="stylesheet" href="/css/style.css">
-	<title>NathPaiva</title>
-</head>
-<body>
-	<section class="container">
-		<h1>Oooops, I'm doing something better or at least trying...</h1>
-		<h2>Here's how it's getting... <a href="/portfolio">click here!</a></h2>
+---
+layout: default
+---
+<div class="home">
 
-		<h3>Some studies links</h3>
-		<dl>
-			<dt>Contacts - organize contacts in alphabetic order</dt>
-			<dd><a target="_blank" href="https://github.com/nathpaiva/contacts">GitHub</a></dd>
-			<dd>[ Demo Success ] - <a target="_blank" href="http://nathpaiva.com.br/contacts/?resultCall=success">Success call</a></dd>
-			<dd>[ Demo Error ] - <a target="_blank" href="http://nathpaiva.com.br/contacts/?resultCall=error">Error call</a></dd>
-		</dl>
-		<dl>
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}">
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+    </header>
+  </div>
+</div>
 
-			<dt>Todolist - Studying phonegap</dt>
-			<dd><a target="_blank" href="https://github.com/nathpaiva/todolist">GitHub</a></dd>
-			<dd>[ Demo ] - <a target="_blank" href="http://nathpaiva.com.br/todolist/">Todolist</a></dd>
-		</dl>
+<div class="wrapper">
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+      <div class="post-categories">
+      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
+        {% if site.jekyll-archives %}
+        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% else %}
+        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endif %}
+      {% endfor %}{% endif %}
+      </div>
+    </section>
+  </li>
+  {% if forloop.last == false %}
+  <hr>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-		<dl>
-			<dt>List with Angular - Studying angular</dt>
-			<dd><a target="_blank" href="https://github.com/nathpaiva/list-angular">GitHub</a></dd>
-			<dd>[ Demo ] - <a target="_blank" href="http://nathpaiva.com.br/ibuy/#/">iBuy</a></dd>
-		</dl>
+<nav class="pagination" role="navigation">
+	<p>
+    {% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+			<a class="newer-posts" href="{% if site.baseurl %}{{ site.baseurl }}{% endif %}/">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+			{% else %}
+			<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.previous_page}}">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			{% endif %}
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+		<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+		<a class="newer-posts" href="{{ site.baseurl }}/page{{paginator.next_page}}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+	</p>
+</nav>
 
-		<br>
-		<p>Contact: <a href="mailto:hello@nathpaiva.com.br">hello@nathpaiva.com.br</a></p>
-	</section>
-</body>
-</html>
+</div>
+</div>

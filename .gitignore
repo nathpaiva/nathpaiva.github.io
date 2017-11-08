@@ -1,5 +1,1 @@
-#--------------------------#
-# e-Smart Front Ignores    #
-#--------------------------#
-**/node_modules/
 .sass-cache/

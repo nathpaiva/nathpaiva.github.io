@@ -1,3 +1,1 @@
-# Portfolio
-
-- My portfolio [click here](http://nathpaiva.com.br/)
+# Blog about dev
