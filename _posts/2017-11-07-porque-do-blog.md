@@ -6,7 +6,7 @@ author: Nath Paiva
 categories: Javascript
 tags:
 - "javascript"
-cover:  "/assets/instacode.png"
+cover:  "/assets/instacode.jpg"
 ---
 
 # JS é ❤️
