@@ -306,7 +306,8 @@ pre code.hljs {
     display: block;
     float: right;
     margin: 0;
-    font-size: 1.5em; }
+    font-size: 1.5em;
+    padding-top: 0.5em; }
     @media screen and (min-width: 768px) {
       .navigation .navigation-menu-button {
         display: none; } }

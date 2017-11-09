@@ -30,6 +30,8 @@ highlightjs_theme: "monokai-sublime"
 disqus_shortname: nathpaiva
 
 links:
+  - title: Blog
+    url: /
   - title: Sobre mim
     url: /sobre
   - title: Tags
