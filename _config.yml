@@ -15,7 +15,7 @@ description: >
 
 # Base URL
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://nathpaiva.github.io" # the base hostname & protocol for your site
+url: "http://nathpaiva.com.br" # the base hostname & protocol for your site
 cover: "/assets/header_image_nath.jpg"
 logo: "/assets/logo.png"
 
