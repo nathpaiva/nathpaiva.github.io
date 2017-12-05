@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "var, const e let"
+title:  "operadores"
 date:   2017-12-04 22:02:40
 author: Nath Paiva
 categories: Javascript
