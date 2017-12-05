@@ -116,7 +116,7 @@ Ainda temos como expressão lógica o `!` que negativa a nossa pergunta.
 
 Essa duas negações nos retorna true pois a comparação não é verdadeira mais transforma para true
 
-Operador de string
+## Operador de string
 
 Como já mencionamos no operador aritmético, podemos “somar” número com string, ou até mesmo string com string e como falei lá isso se chama concatenar.
 
@@ -211,4 +211,4 @@ Esses são os operadores que existem, além deles ainda temos o relacional e ope
 Vou voltar a escrever sobre operadores assim que tiver uma compreensão maior sobre os que faltaram… rsrs
 
 ### Referencia:
-- [Operadores](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Operadores](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_Operators){:target="blank"}
