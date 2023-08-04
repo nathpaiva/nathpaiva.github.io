@@ -5,6 +5,9 @@ gems:
 exclude:
   - "/vendor/"
 
+
+plugins: [jekyll-paginate]
+
 # Site settings
 title: Escrever para aprender...
 subtitle: "Um blog para escrever sobre JS ou tudo o que eu aprender em desenvolvimento <3"
@@ -55,7 +58,7 @@ social:
   - name: LinkedIn
     icon: linkedin
     username: Nath Paiva
-    url: https://www.linkedin.com/in/nathalia-paiva-front-end/?locale=en_US
+    url: https://www.linkedin.com/in/nathpaiva/
     desc: Connect with me on LinkedIn
     share: true
 
