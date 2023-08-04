@@ -83,6 +83,7 @@ DEPENDENCIES
   jekyll-archives
   jekyll-coffeescript
   jekyll-paginate
+  jekyll-sass-converter
   jekyll-sitemap
 
 BUNDLED WITH
