@@ -1,5 +1,5 @@
 # External gems
-plugins: [jekyll-paginate]
+plugins: [jekyll-paginate, jekyll-coffeescript]
 
 exclude:
   - "/vendor/"
