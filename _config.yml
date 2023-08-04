@@ -1,12 +1,8 @@
 # External gems
-gems:
-  - jekyll-paginate
+plugins: [jekyll-paginate]
 
 exclude:
   - "/vendor/"
-
-
-plugins: [jekyll-paginate]
 
 # Site settings
 title: Escrever para aprender...
