@@ -3,7 +3,7 @@ layout: post
 title:  "var, const e let"
 date:   2017-11-13 21:39:40
 author: Nath Paiva
-categories: Javascript
+categories: javascript
 tags:
 - "javascript"
 cover:  "/assets/instacode.jpg"

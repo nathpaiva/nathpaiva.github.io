@@ -3,7 +3,7 @@ layout: post
 title:  "Por que criei o blog?"
 date:   2017-11-07 08:43:59
 author: Nath Paiva
-categories: Javascript
+categories: javascript
 tags:
 - "javascript"
 cover:  "/assets/instacode.jpg"

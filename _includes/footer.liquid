@@ -14,20 +14,20 @@
 <script type="text/javascript">
   $(document).ready(function() {
   // Default syntax highlighting
-    hljs.initHighlightingOnLoad();
+      hljs.initHighlightingOnLoad();
   
-    // Header
-    var menuToggle = $('#js-mobile-menu').unbind();
-    $('#js-navigation-menu').removeClass("show");
-    menuToggle.on('click', function(e) {
-      e.preventDefault();
-      $('#js-navigation-menu').slideToggle(function(){
-        if($('#js-navigation-menu').is(':hidden')) {
-          $('#js-navigation-menu').removeAttr('style');
-        }
+      // Header
+      var menuToggle = $('#js-mobile-menu').unbind();
+      $('#js-navigation-menu').removeClass("show");
+      menuToggle.on('click', function(e) {
+        e.preventDefault();
+        $('#js-navigation-menu').slideToggle(function(){
+          if($('#js-navigation-menu').is(':hidden')) {
+            $('#js-navigation-menu').removeAttr('style');
+          }
+        });
       });
-    });
-  });</script>
+    });</script>
 
 {% if page.custom_js %}
   <!-- Custom page specific js files -->
@@ -56,7 +56,8 @@
       'page': '{{ page.url }}',
       'title': '{% if page.title %}{{ page.title }}
     {% else %}
-      {{ site.title }}{% endif %}'
+      {{ site.title }}
+    {% endif %}'
   });
   </script>
 {% endif %}
