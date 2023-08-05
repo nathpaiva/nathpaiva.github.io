@@ -35,6 +35,8 @@ links:
     url: /about
   - title: Tags
     url: /tags
+  - title: Projects
+    url: /projects
 
 social:
   - name: LinkedIn

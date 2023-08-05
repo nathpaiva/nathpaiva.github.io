@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="https://github.com/nathpaiva.png" title="Profile Picture" class="profile" />
+<img src="https://github.com/nathpaiva.png" title="Nath Paiva github profile picture" class="profile" />
 
 # Hi, I'm Nath (nat) 👋!
 
