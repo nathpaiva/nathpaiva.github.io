@@ -29,14 +29,14 @@ highlightjs_theme: "monokai-sublime"
 disqus_shortname: nathpaiva
 
 links:
-  - title: Blog
+  - title: blog
     url: /
-  - title: About me
+  - title: about.me
     url: /about
-  - title: Tags
-    url: /tags
-  - title: Projects
+  - title: projects
     url: /projects
+  - title: tags
+    url: /tags
 
 social:
   - name: LinkedIn
