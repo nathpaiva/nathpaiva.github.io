@@ -72,7 +72,3 @@ protocols:
     os_repo: "https://github.com/nathpaiva/nathpaiva.github.io"
     os_rcs_type: "git"
     os_src: "git@github.com:nathpaiva/nathpaiva.github.io.git"
-
-sass:
-    sass_dir: _sass
-    style: compressed
