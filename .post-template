@@ -1,0 +1,9 @@
+---
+layout: post,
+title: <Post title here>
+date: YYYY-MM-DD HH:MM
+category: <_category>
+author: Nath Paiva
+tags: [_tag1, _tag2]
+cover: "/assets/___*.jpg"
+---
