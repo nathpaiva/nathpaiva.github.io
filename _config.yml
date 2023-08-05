@@ -5,12 +5,12 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Escrever para aprender...
-subtitle: "Um blog para escrever sobre JS ou tudo o que eu aprender em desenvolvimento <3"
+title: Write to learn......
+subtitle: "This blog is to show my skills and write about what I've been learning in my career"
 email: hello@nathpaiva.com.br
 name: Nath Paiva
 description: >
-  Um blog para escrever sobre JS ou tudo o que eu aprender em desenvolvimento <3.
+  This blog is to show my skills and write about what I've been learning in my career
 
 # Base URL
 baseurl: "" # the subpath of your site, e.g. /blog/
@@ -31,12 +31,26 @@ disqus_shortname: nathpaiva
 links:
   - title: Blog
     url: /
-  - title: Sobre mim
-    url: /sobre
+  - title: About me
+    url: /about
   - title: Tags
     url: /tags
 
 social:
+  - name: LinkedIn
+    icon: linkedin
+    username: Nath Paiva
+    url: https://www.linkedin.com/in/nathpaiva/
+    desc: Connect with me on LinkedIn
+    share: true
+
+  - name: Instagram
+    icon: instagram
+    username: Nath Paiva
+    url: https://www.instagram.com/nathpaiva
+    desc: Connect with me on Instagram
+    share: false
+
   - name: Twitter
     icon: twitter
     username: NathPaiva
@@ -51,12 +65,12 @@ social:
     desc: Fork me on GitHub
     share: false
 
-  - name: LinkedIn
-    icon: linkedin
+  - name: About.me
+    icon: instagram
     username: Nath Paiva
-    url: https://www.linkedin.com/in/nathpaiva/
-    desc: Connect with me on LinkedIn
-    share: true
+    url: https://about.me/nathpaiva
+    desc: Connect with me on AboutMe
+    share: false
 
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter
