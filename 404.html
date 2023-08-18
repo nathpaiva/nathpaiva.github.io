@@ -16,5 +16,15 @@ permalink: /404.html
     <div class="image-container round">
       <img alt="Nath's picture laid down on the floor" src="/assets/nathpaiva-melting.jpeg" />
     </div>
+
+    <p>In the meanwhile, we would like to recommend a few posts:</p>
+
+    <ul class="post-list">
+      {% for post in site.posts | limit:2 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </div>

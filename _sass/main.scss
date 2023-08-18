@@ -479,6 +479,15 @@ pre code.hljs {
   height: calc(100vh - 102px);
   display: grid;
   align-items: center;
+
+  ul.post-list {
+    width: max-content;
+    margin: auto;
+
+    li {
+      list-style: square;
+    }
+  }
 }
 
 .emoji-big {
@@ -488,18 +497,18 @@ pre code.hljs {
 .image-container {
   overflow: hidden;
   max-width: 320px;
-  margin: auto;
+  margin: auto auto 14.4px;
   height: 320px;
 
   &.round{
     border-radius: 100%;
-  }
-}
 
-.image-container.round img {
-  width: 100%;
-  height: auto;
-  margin: -70px 0 0;
+    img {
+      width: 100%;
+      height: auto;
+      margin: -70px 0 0;
+    }
+  }
 }
 
 .page-content .home .wrapper, .page-content .post .wrapper {
