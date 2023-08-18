@@ -473,6 +473,35 @@ pre code.hljs {
   padding: 1em;
 
 }
+
+.wrapper--404 {
+  text-align: center;
+  height: calc(100vh - 102px);
+  display: grid;
+  align-items: center;
+}
+
+.emoji-big {
+  font-size: 30px;
+}
+
+.image-container {
+  overflow: hidden;
+  max-width: 320px;
+  margin: auto;
+  height: 320px;
+
+  &.round{
+    border-radius: 100%;
+  }
+}
+
+.image-container.round img {
+  width: 100%;
+  height: auto;
+  margin: -70px 0 0;
+}
+
 .page-content .home .wrapper, .page-content .post .wrapper {
   min-height: calc(100vh - 438px - 64px - 37.9px);
 }
