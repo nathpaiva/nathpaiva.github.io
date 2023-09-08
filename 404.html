@@ -20,7 +20,7 @@ permalink: /404.html
     <p>In the meanwhile, we would like to recommend a few posts:</p>
 
     <ul class="post-list">
-      {% for post in site.posts | limit:2 %}
+      {% for post in site.posts limit:2 %}
         <li>
           <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
