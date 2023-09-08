@@ -23,31 +23,31 @@ cover:  "/assets/instacode.jpg"
 
 Hey there, in this post I want to share about [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"} and [`Audio API`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio){:target="_blank"}.
 
-A few years ago I did a technical interview where the interviewer asked me to play a song from an array. Well, I miserable failed, and wasn't because I didn't know about `Promise`, or even about the `Audio API`.
+A few years ago, I did a technical interview where the interviewer asked me to play a song from an array. Well, I miserably failed, and it wasn’t because I didn’t know about `Promise` or the `Audio API`.
 
-I've failed because when I'm being tested by someone, my brain can't process as I wish 🫠. This is an issue that I have in my life for a bunch of situations. So regarding code, this blog is the safe place I have to develop my confidence and share what I love to do. Maybe in the future, I will be more prepared for those "silly" questions _(I hate so much interview process. Who doesn't?)_.
+I’ve failed because when I’m being tested by someone, my brain can’t process as I wish 🫠. This is an issue I have in my life in many situations. So, regarding code, this blog is a safe place to develop my confidence and share what I love to do. Maybe in the future, I will be more prepared for those “silly” questions _(I hate an interview process. Who doesn’t?)_.
 
-Anyway, let's start talking about code. Because this is what we love to do, at least I do love hahahahaha. 😂
+Anyway, let’s start talking about code. Because this is what we love to do, at least I do love hahahahaha. 😂
 
 ## The challenge
 
-So basically, the challenge is to create a `function` that receives an `array` of song paths (`string`) and play each song sequentially. The next song must play only after the previews has finished. To resolve this challenge, we must know about, `Audio API`, `loops` and asynchronous functions (`Promise`).
+So basically, the challenge is to create a `function` that receives an `array` of song paths (`string`) and play each song sequentially. The next song must be played only after the previous one has finished. To resolve this challenge, we must know about, `Audio API`, `loops` and asynchronous functions (`Promise`).
 
 ### Audio API
 
-First of all we have to know is the latest browsers doesn't let us play a media automatically after the page renders. [We got this exception](https://developer.chrome.com/blog/autoplay/){:target="_blank"}:
+First of all, we have to know that the latest browsers don't let us play media automatically after the page renders. [We got this exception](https://developer.chrome.com/blog/autoplay/){:target="_blank"}:
 
 > [(index):245 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.](https://developer.chrome.com/blog/autoplay/){:target="_blank"}
 
-The user must do some interaction with the page before the script starts the song, in our case. So to make this work first we need to make this interaction happens.
+The user must do some interaction with the page before the script starts the song, in our case. So to make this work first we need to make this interaction happen.
 
-In our HTML file we can just create a `button`, and then create the action to start.
+In our HTML file, we can just create a `button`, and then create the action to start.
 
 ```html
 <button type="button">Play</button>
 ```
 
-On JS side, we can added a listener for the button element.
+On the JS side, we can add a listener for the button element.
 
 ```js
 (() => {
@@ -61,7 +61,7 @@ On JS side, we can added a listener for the button element.
 })()
 ```
 
-Inside the button action we can trigger the function to load each file and then play the song. Therefore we can start the function creation which will receive and array and play each song. For this stage we want only log the file name.
+Inside the button action, we can trigger the function to load each file and then play the song. Therefore we can start the function creation which will receive the array and play each song. For this stage, we want only to log the file name.
 
 ```js
 function autoPlaylist(audioList) {
@@ -160,6 +160,7 @@ To conclude in this article we saw about `loop`, `Promise` and `Audio API`. Some
 ## Link references
 
 - [Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 - [loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 - [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
