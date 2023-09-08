@@ -56,7 +56,7 @@ On the JS side, we can add a listener for the button element.
   // first get the button from the DOM
   const buttonElement = document.querySelector('button')
 
-  // with this element we can add the addEventListener fot the `click` type.
+  // with this element we can add the addEventListener for the `click` type.
   buttonElement.addEventListener('click', () => {
     console.log('this message will show after click')
   })
