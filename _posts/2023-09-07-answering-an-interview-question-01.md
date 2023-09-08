@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "Answering an interview question - 01"
+title:  Answering an interview question - 01
 date:   2023-09-07 18:49:00
 author: Nath Paiva
-categories: javascript
+categories:
+- javascript
 tags:
-- "javascript"
+- javascript
+- interview
 cover:  "/assets/instacode.jpg"
 ---
 
