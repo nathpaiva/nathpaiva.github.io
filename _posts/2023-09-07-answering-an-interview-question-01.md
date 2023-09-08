@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Answer an interview question - 01"
+title:  "Answering an interview question - 01"
 date:   2023-09-07 18:49:00
 author: Nath Paiva
 categories: javascript
@@ -11,7 +11,7 @@ cover:  "/assets/instacode.jpg"
 
 # Post summary
 
-- [Answer an interview question - 01](#answer-interview-question---01)
+- [Answering an interview question - 01](#answering-an-interview-question---01)
 - [The challenge](#the-challenge)
   - [Audio API](#audio-api)
   - [Loop](#loop)
@@ -19,7 +19,7 @@ cover:  "/assets/instacode.jpg"
 - [That's all](#thats-all)
 - [Link references](#link-references)
 
-# Answer an interview question - 01
+# Answering an interview question - 01
 
 Hey there, in this post I want to share about [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"} and [`Audio API`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio){:target="_blank"}.
 
@@ -81,13 +81,13 @@ buttonElement.addEventListener('click', () => {
 
 ### Loop
 
-As we can see on the code above, the loop chosen to log each value is the [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration){:target="_blank"}, we could also use `while` or any functional array method such as `map`, `reduce` or `filter`, but not **`forEach`**.
+As we can see on the code above, the loop chosen to log each value is the [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration){:target="_blank"}, we could also use `while` or any functional array method such as `map`, `reduce` or `filter,` but not **`forEach`**.
 
-First, we didn't chose any functional array method because after play the song we don't need any new array.
+First, we didn't choose any functional array method because after playing the song, we won't need any new array.
 
-So why we are not using `forEach`? Basically in the next step we have to play our audio, and to not play all together we have to run it asynchronously. And the `forEach` method has a different behaviour for async, and instead wait to finish the async code an run the next item, the `forEach` resolve all at once.
+So why are we not using `forEach`? Basically, in the next step, we have to play our audio, and we can't play all at the same time. We have to run it asynchronously. The `forEach` method has a different behaviour for async, and instead of waiting to finish the async code and run the next item, the `forEach` resolves all at once.
 
-If we just use the `Audio API` and call the `play` method, without changing our function to run as async, all songs will play at the same time, take a look on the following code:
+If we just use the `Audio API` and call the `play` method without changing our function to run as async, all songs will play at the same time. Let's take a look at the following code:
 
 ```js
 function autoPlaylist(audioList) {
@@ -101,14 +101,13 @@ function autoPlaylist(audioList) {
 }
 ```
 
-With this code, the result we will have is all songs playing together. Because the loop doesn't know whether the song has finished or not, neither the content which is running inside it. And well, we don't want it, right? So now it's time to use the `Promise`, and let our loop knows if should go to the next song or not. The question now is:
+With this code, the result we will have is all songs playing together. Because the loop doesn't know whether the song has finished or not, nor the content which is running inside it. And well, we don't want it, right? So now it's time to use the `Promise`, and let our loop know if should go to the next song or not. The question now is:
 
 ### What the `Promise` does for us?
 
-[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is an object that gives us methods which we can call whether an `async` action finishes successfully or not. Therefore if we have to execute something that takes a while to complete and after completion we have to run a next action, we have use `Promise`. With `.resolve()` and `.reject()` method our code will understand exactly the execution has finished. So let's take a look how it works with our songs.
+[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is an object that gives us methods which we can call whether an `async` action finishes successfully or not. Therefore if we have to execute something that takes a while to complete and after completion, we have to run the next action, we have to use `Promise`. With the `.resolve()` and `.reject()` methods our code will understand exactly when the execution has finished. So let's take a look at how it works with our songs.
 
-Previously our code was playing all songs at the same time, and we have to control it. The first think to do is declare our `autoPlaylist` function as `async`. With this declaration we are able to wait an async function finish to call the next action.
-
+Previously our code was playing all songs at the same time, so we need to control it. The first thing to do is declare our `autoPlaylist` function as `async`. With this declaration, we are able to wait for an async function to finish to call the next action.
 
 Now we will use [`async` / `await`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function){:target="_blank"} and `new Promise()`
 
@@ -153,23 +152,22 @@ async function autoPlaylist(audioList) {
 
 ## That's all
 
-Phew... Ya, it's a lot. But now we have our `autoPlaylist` playing each song sequentially and not all at the same time. Of course we can break down the code above to have a better organization, but after all the main concept is that.
+Phew... Ya, it's a lot. But now we have our `autoPlaylist` playing each song sequentially and not all at the same time. Of course, we can break down the code above to have a better organization, but after all the main concept is that.
 
-To conclude in this article we saw about `loop`, `Promise` and `Audio API`. Sometimes work with Promise in run time while we have to wait something else to continue could not be easy, nevertheless now we can understand a bit how it works. Following I'm adding the list of documentations I used to create it, and also the demo with the example created here.
+To conclude in this article we saw about `loop`, `Promise` and `Audio API`. Sometimes working with `Promise` in run time while we have to wait for something else to continue could not be easy, nevertheless, now we can understand a bit more how it works. Following I'm adding the list of documentation I used to create it, and also the demo with the example created here.
 
 ## Link references
 
-- [Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
-- [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
-- [loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
-- [filer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-- [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [async await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- [Do not use forEach with async-await](https://gist.github.com/joeytwiddle/37d2085425c049629b80956d3c618971)
-
-- [Demo](https://codesandbox.io/s/autoplaylist-x36jc3?file=/src/index.mjs)
+- [Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API){:target="_blank"}
+- [querySelector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector){:target="_blank"}
+- [loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration){:target="_blank"}
+- [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map){:target="_blank"}
+- [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce){:target="_blank"}
+- [filer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter){:target="_blank"}
+- [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach){:target="_blank"}
+- [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"}
+- [async await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function){:target="_blank"}
+- [Do not use forEach with async-await](https://gist.github.com/joeytwiddle/37d2085425c049629b80956d3c618971){:target="_blank"}
+- [Demo](https://codesandbox.io/s/autoplaylist-x36jc3?file=/src/index.mjs){:target="_blank"}
 
 Thanks, see you 👋.
