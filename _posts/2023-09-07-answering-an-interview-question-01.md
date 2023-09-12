@@ -23,17 +23,17 @@ cover:  "/assets/instacode.jpg"
 
 # Answering an interview question - 01
 
-Hey there, in this post I want to share about [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"} and [`Audio API`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio){:target="_blank"}.
+Hey there, in this post I want to share learns about [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise){:target="_blank"} and [`Audio API`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio){:target="_blank"}.
 
 A few years ago, I did a technical interview where the interviewer asked me to play a song from an array. Well, I miserably failed, and it wasn’t because I didn’t know about `Promise` or the `Audio API`.
 
-I’ve failed because when I’m being tested by someone, my brain can’t process as I wish 🫠. This is an issue I have in my life in many situations. So, regarding code, this blog is a safe place to develop my confidence and share what I love to do. Maybe in the future, I will be more prepared for those “silly” questions _(I hate an interview process. Who doesn’t?)_.
+I failed because when I’m being tested by someone, my brain can’t process the challenge as I wish 🫠. This is an issue I have in my life in many situations. So, regarding code, this blog is a safe place to develop my confidence and share what I love to do. Maybe in the future, I will be more prepared for those “silly” questions _(I hate an interview process. Who doesn’t?)_.
 
 Anyway, let’s start talking about code. Because this is what we love to do, at least I do love hahahahaha. 😂
 
 ## The challenge
 
-So basically, the challenge is to create a `function` that receives an `array` of song paths (`string`) and play each song sequentially. The next song must be played only after the previous one has finished. To resolve this challenge, we must know about, `Audio API`, `loops` and asynchronous functions (`Promise`).
+So, basically the challenge is to create a `function` that receives an `array` of song paths (`string`) and plays each song sequentially. The next song must be played only after the previous one has finished. To resolve this challenge, we must know `Audio API`, `loops` and asynchronous functions (`Promise`).
 
 ### Audio API
 
@@ -41,7 +41,7 @@ First of all, we have to know that the latest browsers don't let us play media a
 
 > [(index):245 Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first.](https://developer.chrome.com/blog/autoplay/){:target="_blank"}
 
-The user must do some interaction with the page before the script starts the song, in our case. So to make this work first we need to make this interaction happen.
+The user must do some interaction with the page before the script starts the song. So, to make this work first we need to make this interaction happen.
 
 In our HTML file, we can just create a `button`, and then create the action to start.
 
@@ -63,7 +63,7 @@ On the JS side, we can add a listener for the button element.
 })()
 ```
 
-Inside the button action, we can trigger the function to load each file and then play the song. Therefore we can start the function creation which will receive the array and play each song. For this stage, we want only to log the file name.
+Inside the button action, we can trigger the function to load each file and then play the song. Therefore, we can start the function creation which will receive the array and play each song. For this stage we want only to log the file name.
 
 ```js
 function autoPlaylist(audioList) {
@@ -85,9 +85,9 @@ buttonElement.addEventListener('click', () => {
 
 As we can see on the code above, the loop chosen to log each value is the [`for`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration){:target="_blank"}, we could also use `while` or any functional array method such as `map`, `reduce` or `filter,` but not **`forEach`**.
 
-First, we didn't choose any functional array method because after playing the song, we won't need any new array.
+First, we didn't choose any functional array method because after playing the song we won't need any new array.
 
-So why are we not using `forEach`? Basically, in the next step, we have to play our audio, and we can't play all at the same time. We have to run it asynchronously. The `forEach` method has a different behaviour for async, and instead of waiting to finish the async code and run the next item, the `forEach` resolves all at once.
+So, why are we not using `forEach`? Basically, in the next step we have to play our audio, and we can't play all at the same time. We have to run it asynchronously. The `forEach` method has a different behaviour for async, and instead of waiting to finish the async code and run the next item, the `forEach` resolves all at once.
 
 If we just use the `Audio API` and call the `play` method without changing our function to run as async, all songs will play at the same time. Let's take a look at the following code:
 
@@ -107,7 +107,7 @@ With this code, the result we will have is all songs playing together. Because t
 
 ### What the `Promise` does for us?
 
-[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is an object that gives us methods which we can call whether an `async` action finishes successfully or not. Therefore if we have to execute something that takes a while to complete and after completion, we have to run the next action, we have to use `Promise`. With the `.resolve()` and `.reject()` methods our code will understand exactly when the execution has finished. So let's take a look at how it works with our songs.
+[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) is an object that gives us methods which we can call whether an `async` action finishes successfully or not. We have to use `Promise` if we have to execute something that takes a while to complete and after completion we have to run the next action. With the `.resolve()` and `.reject()` methods our code will understand exactly when the execution has finished. So, let's take a look at how it works with our songs.
 
 Previously our code was playing all songs at the same time, so we need to control it. The first thing to do is declare our `autoPlaylist` function as `async`. With this declaration, we are able to wait for an async function to finish to call the next action.
 
@@ -154,9 +154,9 @@ async function autoPlaylist(audioList) {
 
 ## That's all
 
-Phew... Ya, it's a lot. But now we have our `autoPlaylist` playing each song sequentially and not all at the same time. Of course, we can break down the code above to have a better organization, but after all the main concept is that.
+Phew... Ya, it's a lot. But now we have our `autoPlaylist` playing each song sequentially and not all at the same time. Of course, we can break down the code above to have better organization, but after all the main concept is that.
 
-To conclude in this article we saw about `loop`, `Promise` and `Audio API`. Sometimes working with `Promise` in run time while we have to wait for something else to continue could not be easy, nevertheless, now we can understand a bit more how it works. Following I'm adding the list of documentation I used to create it, and also the demo with the example created here.
+To conclude, in this article we saw `loop`, `Promise` and `Audio API`. Sometimes working with `Promise` in run time while we have to wait for something else to continue could not be easy. Nevertheless, now we can understand a bit more how it works. Following, I'm adding the list of documentations I used to create it, and also the demo with the example created here.
 
 ## Link references
 
